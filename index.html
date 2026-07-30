@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SkyBook Airlines</title>
+
+<a href="search-flights.html" class="btn btn-warning btn-lg">
+Search Flights
+</a>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#f5f7fa;
+}
+
+.navbar{
+background:#0d6efd;
+}
+
+.navbar-brand{
+font-size:28px;
+font-weight:bold;
+color:white!important;
+}
+
+.nav-link{
+color:white!important;
+font-weight:500;
+margin-left:15px;
+}
+
+.hero{
+height:90vh;
+background:url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=1600') center/cover;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+position:relative;
+}
+
+.hero::before{
+content:"";
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.55);
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+}
+
+.hero h1{
+font-size:55px;
+font-weight:bold;
+}
+
+.hero p{
+font-size:22px;
+margin-top:15px;
+}
+
+.search-box{
+margin-top:-70px;
+background:white;
+border-radius:15px;
+padding:30px;
+box-shadow:0 10px 30px rgba(0,0,0,.2);
+position:relative;
+z-index:5;
+}
+
+.section-title{
+text-align:center;
+font-size:35px;
+font-weight:bold;
+margin:60px 0 40px;
+}
+
+.card{
+border:none;
+border-radius:15px;
+overflow:hidden;
+transition:.4s;
+box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card img{
+height:220px;
+object-fit:cover;
+}
+
+.offer{
+background:#0d6efd;
+color:white;
+padding:30px;
+border-radius:15px;
+text-align:center;
+margin-bottom:25px;
+}
+
+footer{
+background:#111;
+color:white;
+padding:40px 0;
+margin-top:70px;
+}
+
+footer a{
+color:white;
+text-decoration:none;
+display:block;
+margin-top:8px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg">
+<div class="container">
+
+<a class="navbar-brand" href="#">✈ SkyBook</a>
+
+<button class="navbar-toggler bg-white" data-bs-toggle="collapse" data-bs-target="#menu">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="menu">
+
+<ul class="navbar-nav ms-auto">
+
+<li class="nav-item">
+<a class="nav-link" href="#">Home</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="search-flights.html">Flights</a>
+</li>
+
+<li class="nav-item">
+    <a class="nav-link" href="my-bookings.html">
+        My Bookings
+    </a>
+</li>
+
+<li class="nav-item">
+    <a class="nav-link" href="#offers">
+        Offers
+    </a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#">Contact</a>
+</li>
+
+<li class="nav-item">
+    <a class="nav-link" href="login.html">
+        Login / Register
+    </a>
+</li>
+
+</ul>
+
+</div>
+
+</div>
+</nav>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Book Your Dream Flight</h1>
+
+<p>Cheap Flights • Secure Booking • Best Deals</p>
+
+<a href="#search" class="btn btn-warning btn-lg mt-4">
+Search Flights
+</a>
+
+</div>
+
+</section>
+
+<div class="container">
+
+<section class="py-5 text-center bg-light">
+
+<div class="container">
+
+<h2 class="fw-bold mb-3">
+Ready to Book Your Flight?
+</h2>
+
+<p class="text-muted fs-5">
+Find the best domestic and international flight deals at the lowest prices.
+</p>
+
+<a href="search-flights.html" class="btn btn-primary btn-lg mt-3 px-5">
+Search Flights
+</a>
+
+</div>
+
+</section>
+
+<h2 class="section-title">
+Popular Destinations
+</h2>
+
+<div class="row">
+
+<div class="col-md-3 mb-4">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?w=800" class="card-img-top">
+<div class="card-body text-center">
+<h4>Goa</h4>
+<h5 class="text-primary">₹3,999</h5>
+<button class="btn btn-primary">Book Now</button>
+</div>
+</div>
+</div>
+
+<div class="col-md-3 mb-4">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1529253355930-ddbe423a2ac7?w=800">
+<div class="card-body text-center">
+<h4>Mumbai</h4>
+<h5 class="text-primary">₹2,499</h5>
+<button class="btn btn-primary">Book Now</button>
+</div>
+</div>
+</div>
+
+<div class="col-md-3 mb-4">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800">
+<div class="card-body text-center">
+<h4>Dubai</h4>
+<h5 class="text-primary">₹14,999</h5>
+<button class="btn btn-primary">Book Now</button>
+</div>
+</div>
+</div>
+
+<div class="col-md-3 mb-4">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1596176530529-78163a4f7af2?w=800">
+<div class="card-body text-center">
+<h4>Bengaluru</h4>
+<h5 class="text-primary">₹2,999</h5>
+<button class="btn btn-primary">Book Now</button>
+</div>
+</div>
+</div>
+</div>
+
+<h2 class="section-title">
+Offers & Discounts
+</h2>
+
+<section>
+<div class="row">
+<div class="col-md-6">
+<div class="offer">
+<h2>🔥 Summer Sale</h2>
+<h3>Flat 20% OFF</h3>
+<p>Use Coupon Code</p>
+<h4>FLY20</h4>
+<button class="btn btn-warning mt-3">
+Grab Offer
+</button>
+</div>
+</div>
+
+<div class="col-md-6">
+<div class="offer" style="background:#198754;">
+<h2>🎉 First Flight Offer</h2>
+<h3>₹1000 OFF</h3>
+<p>Use Coupon Code</p>
+<h4>WELCOME</h4>
+<button class="btn btn-light mt-3">
+Claim Now
+</button>
+</div>
+</div>
+
+</div>
+</section>
+
+<h2 class="section-title">
+Why Choose Us
+</h2>
+
+<div class="row text-center mb-5">
+
+<div class="col-md-3">
+<div class="card p-4">
+<h1>✈</h1>
+<h4>Lowest Fare</h4>
+<p>Best ticket prices guaranteed.</p>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="card p-4">
+<h1>🛡</h1>
+<h4>Safe Booking</h4>
+<p>100% Secure online booking.</p>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="card p-4">
+<h1>💳</h1>
+<h4>Secure Payment</h4>
+<p>Fast & Secure payment gateway.</p>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="card p-4">
+<h1>📞</h1>
+<h4>24×7 Support</h4>
+<p>Customer support anytime.</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+<footer>
+
+<div class="container">
+
+<div class="row">
+
+<div class="col-md-4">
+<h3>✈ SkyBook Airlines</h3>
+<p>
+Book domestic and international flights at the best price with secure online booking.
+</p>
+</div>
+
+<div class="col-md-4">
+<h3>Quick Links</h3>
+
+<a href="#">Home</a>
+<a href="#">Flights</a>
+<a href="#">Offers</a>
+<a href="#">Bookings</a>
+<a href="#">Contact</a>
+
+</div>
+
+<div class="col-md-4">
+<h3>Contact</h3>
+
+<p>📍 Ahmedabad, Gujarat</p>
+<p>📞 +91 9876543210</p>
+<p>📧 support@skybook.com</p>
+
+</div>
+
+</div>
+
+<hr style="background:white;">
+
+<div class="text-center">
+
+<p>
+© 2026 SkyBook Airlines. All Rights Reserved.
+</p>
+
+</div>
+
+</div>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+
+const searchButton=document.querySelector(".search-box button");
+
+searchButton.addEventListener("click",function(){
+
+let from=document.querySelectorAll("input")[0].value;
+let to=document.querySelectorAll("input")[1].value;
+
+if(from=="" || to=="")
+{
+alert("Please Enter From and To Destination");
+}
+else
+{
+alert("Searching Flights From "+from+" To "+to);
+}
+
+});
+
+</script>
+
+</body>
+</html>
